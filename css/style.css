@@ -15,6 +15,10 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -33,6 +37,30 @@ header {
     max-width: 1152px;
     padding: 0 15px;
     margin: 0 auto;
+}
+
+@media (min-width:576px){
+    .container{
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px){
+    .container{
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px){
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px){
+    .container{
+        max-width: 1152px;
+    }
 }
 
 header nav .left a {
@@ -124,31 +152,102 @@ section.about p{
     margin-bottom: 2rem;
 }
 
-section.about .social{
-    display: flex;
+
+section.about .social a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	box-shadow: 3px 3px 10px #aeaeae,
+	-4px -4px 10px white;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	border:3px solid #eee;
+	color: var(--pure);
+	transition: .3s;
 }
 
-section.about .social a{
-   
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 35px;
-    height: 35px;
-    border-radius: 20%;
-    margin-right: 0.6rem;
-    transition: all .3s ease;
+section.about .social b {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	box-shadow: 3px 3px 10px #aeaeae,
+	-4px -4px 10px white;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	border:3px solid #eee;
+	color: var(--pure);
+	transition: .3s;
 }
 
-section.about .social a:hover{
-    background: var(--primary);
-   
+section.about .social c {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	box-shadow: 3px 3px 10px #aeaeae,
+	-4px -4px 10px white;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	border:3px solid #eee;
+	color: var(--pure);
+	transition: .3s;
 }
 
-section.about .social a img{
-    width: 100%;
-    height: 100%;
+section.about .social d {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	box-shadow: 3px 3px 10px #aeaeae,
+	-4px -4px 10px white;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	border:3px solid #eee;
+	color: var(--pure);
+	transition: .3s;
 }
+
+
+section.about .social a:hover {
+	animation: border .6s alternate infinite linear;
+	background-color: var(--secondary);
+	color: blue;
+    
+}
+
+section.about .social b:hover {
+	animation: border .6s alternate infinite linear;
+	background-color: var(--secondary);
+	color: #C13584;
+}
+
+section.about .social c:hover {
+	animation: border .6s alternate infinite linear;
+	background-color: var(--secondary);
+	color: skyblue;
+}
+
+section.about .social d:hover {
+	animation: border .6s alternate infinite linear;
+	background-color: var(--secondary);
+	color: red;
+}
+
+
 
 .sectionHeading{
     color: var(--secondary);
@@ -201,8 +300,8 @@ section.services .cardWrapper .card img{
 section.services .cardWrapper .card h2{
     font-weight: 400;
     font-size: 1.2rem;
-    margin-bottom: o.5rem;
-    margin-bottom: .6rem;
+    margin-bottom: 0.5rem;
+   
 }
 
 section.services .cardWrapper .card p{
@@ -220,10 +319,6 @@ section.services .cardWrapper .card:hover h2, section.services .cardWrapper .car
     color: var(--pure);
 }
 
-.copyright{
-    text-align: center;
-    color: var(--ternary)
-}
 
 section.freelancer{
     padding-bottom: 10rem;
@@ -318,28 +413,23 @@ section.reviews .dots li.slick-active button{
 section.work{
     background: var(--light);
     text-align: center;
-    
-
 }
 
 section.work .section-heading{
-   
-    margin-bottom: 1.5rem;
+     margin-bottom: 1.5rem;
 }
-
 
 section.work .section-heading span{
     color: var(--primary);
 }
 
-
 section.work .container p{
     margin-bottom: 3rem;
 }
+
 section.work .cardWrapper{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+   display: grid;
+   grid-template-columns: repeat(3, 1fr);
 }
 
 section.contact{
@@ -358,9 +448,250 @@ section.contact .container span{
 section.contact .cardWrapper{
     display: grid;
     grid-template-columns: repeat(3 ,1fr);
+    grid-gap: 3rem;
+    margin-bottom: 5rem;
+   
 }
 
 section.contact .card img{
     height: 50px;
-    margin-top: 3rem;
+    margin-top: 5rem;
+    
+}
+
+section.contact .cardWrapper .card h1{
+    font-weight: 300;
+    margin-top: 1rem;
+}
+
+section.contact .cardWrapper .card h6{
+    font-weight: 400;
+    font-size: 1rem;
+    color: var(--ternary);
+}
+
+section.contact .inputWrap{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+section.contact .inputWrap2{
+    display: flex;
+    flex-direction: column;
+
+}
+
+section.contact .inputWrap2 input{
+    margin-bottom: 2rem;
+  
+}
+
+section.contact input{
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+    font-size: 0.9rem;
+}
+
+
+
+section.contact .inputWrap2 textarea{
+    padding: 0.5rem;
+    border: 1px solid var(--light);
+}
+
+section.contact input:focus, section.contact .inputWrap2 textarea:focus{
+    outline: none;
+}
+
+footer{
+    background: var(--dark);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+ footer .social a {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	
+	color: var(--pure);
+	transition: .3s;
+}
+
+footer .social b {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	
+	color: var(--pure);
+	transition: .3s;
+}
+
+footer .social c {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	
+	color: var(--pure);
+	transition: .3s;
+}
+
+footer .social d {
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	background-color: var(--dark);
+	border-radius: 25px;
+	margin: 15px;
+	text-align: center;
+    line-height: 1.6;
+	font-size: 20px;
+	
+	color: var(--pure);
+	transition: .3s;
+}
+
+
+footer .social a:hover {
+	animation: border .6s alternate infinite linear;
+	color: blue;
+ 
+}
+
+footer .social b:hover {
+	animation: border .6s alternate infinite linear;
+	color: #C13584;
+}
+
+footer .social c:hover {
+	animation: border .6s alternate infinite linear;
+	color: skyblue;
+}
+
+footer .social d:hover {
+	animation: border .6s alternate infinite linear;
+	color: red;
+}
+
+
+
+
+footer .copyright{
+    color: var(--ternary);
+    margin-top: 2rem;
+}
+
+
+.sidemWrapper{
+    position: relative;
+}
+
+.hamberger{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    z-index: 11;
+    background: none;
+    border: none;
+    outline: none;
+}
+
+.hamberger img{
+    width: 30px;
+
+}
+
+.mobileNav{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1001;
+    background: var(--light);
+    padding: 3rem;
+    padding-top: 5rem;
+    transform: translateX(-100%);
+    transition: all .5s ease-in-out;
+}
+
+.open{
+    transform: translateX(0);
+}
+
+.times{
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    border: none;
+    background: none;
+}
+
+.mobileNav ul{
+    list-style-type: none;
+}
+
+.mobileNav ul li a{
+    color: var(--secondary);
+    text-decoration: 2rem;
+}
+
+@media  (max-width: 1024px){
+    header #mainNav{
+        display: none;
+    }
+
+
+.hero .left img{
+    width: 260px;
+  
+}
+
+.hero .right h1{
+    font-size: 2rem;
+}
+
+.hero{
+    padding-top: 5rem;
+}
+
+header{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 27% 88%, 0 100%);
+   
+}
+
+section.about .aboutMeImg {
+    height: 371px;
+}
+
+section.services .cardWrapper {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+section.work .cardWrapper {     
+    grid-template-columns: repeat(2,1fr);  
+}
+
+
+
 }
